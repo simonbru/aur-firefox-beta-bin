@@ -15,6 +15,7 @@ echo 'Next version number:'
 read -e -i "$preselection" version
 sed -i "s/pkgver=.*/pkgver=${version}/"  PKGBUILD
 sed -i "s/pkgrel=.*/pkgrel=1/"  PKGBUILD
+updpkgsums
 makepkg --printsrcinfo > .SRCINFO
 git commit PKGBUILD .SRCINFO -m "update to ${version}"
 
