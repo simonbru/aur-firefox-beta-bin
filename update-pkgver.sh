@@ -17,5 +17,5 @@ sed -i "s/pkgver=.*/pkgver=${version}/"  PKGBUILD
 sed -i "s/pkgrel=.*/pkgrel=1/"  PKGBUILD
 updpkgsums
 makepkg --printsrcinfo > .SRCINFO
-git commit PKGBUILD .SRCINFO -m "update to ${version}"
+git commit PKGBUILD .SRCINFO -m "Upgpkg: ${version}"
 
