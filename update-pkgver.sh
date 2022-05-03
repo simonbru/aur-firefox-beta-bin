@@ -13,6 +13,7 @@ echo
 preselection="$(last_version)"
 echo 'Next version number:'
 read -e -i "$preselection" version
+sed -i -E 's@^source=[(].*https://archive.mozilla.org/.+@source=("https://archive.mozilla.org/pub/firefox/releases/$pkgver/linux-x86_64/en-US/firefox-$pkgver.tar.bz2"@' PKGBUILD
 sed -i "s/pkgver=.*/pkgver=${version}/"  PKGBUILD
 sed -i "s/pkgrel=.*/pkgrel=1/"  PKGBUILD
 updpkgsums
