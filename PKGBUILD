@@ -32,7 +32,7 @@ sha256sums=('95a10d4b898b14127db082a9317028e3c43c05144f9a4d88387eb4a3d163a6b9'
             'e977c3d690224dd727d8761d2c0a66ba41bfd02ae0fd7850c4545d06b5a8e63c')
 # RC
 if [[ $_build = ? ]]; then
-  source[0]="firefox-$pkgver.tar.bz2::https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/linux-x86_64/en-US/firefox-$_major.tar.xz"
+  source[0]="firefox-$pkgver.tar.xz::https://ftp.mozilla.org/pub/firefox/candidates/$_major-candidates/build$_build/linux-x86_64/en-US/firefox-$_major.tar.xz"
 fi
 
 package() {
